@@ -133,6 +133,7 @@ namespace BetterTracking
             _instance = this;
 
             OnWidgetSelect.AddListener(new UnityAction<TrackingStationWidget>(OnWidgetSelected));
+            //Add listener for instantiation event
             OnWidgetAwake.AddListener(new UnityAction<TrackingStationWidget>(OnWidgetAwaken));
 
             GameEvents.onNewVesselCreated.Add(new EventData<Vessel>.OnEvent(OnVesselCreate));
